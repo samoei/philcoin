@@ -19,3 +19,19 @@ class ConnectionPool:
     def broadcast_user_quits(self, writer):
         """   Calls the broadcast method with a "user quitting" message """
         pass
+
+    def broadcast_new_message(self, writer, message):
+        """ Calls the broadcast method with a user's chat message """
+        pass
+
+    def list_users(self, writer):
+        """Lists all the users in the pool"""
+        pass
+
+    def add_new_user_to_pool(self, writer):
+        """Adds a new user to our existing pool"""
+        self.connection_pool.add(writer)
+
+    def remove_user_from_pool(self, writer):
+        """ Remove an existing user from our pool """
+        self.connection_pool.remove(writer)
